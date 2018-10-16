@@ -2,8 +2,8 @@ import pytz
 from datetime import datetime
 from pytz import timezone
 
-eastern = timezone('Europe/Amsterdam') #database time
-loc_dt = eastern.localize(datetime.now()) #input date time
+eastern = timezone('Europe/Amsterdam') #timezone from database
+loc_dt = eastern.localize(datetime.now()) #input  datetime
 
 
 loc_dt.astimezone(pytz.utc) #converting into utc
